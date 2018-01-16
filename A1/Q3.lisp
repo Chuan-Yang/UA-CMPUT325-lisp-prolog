@@ -1,0 +1,10 @@
+(defun mix (l1 l2) 
+	(let x 2)
+	(if (null l2)
+		l
+		(if (equal x 1) (+ x 1) 
+			(cons (car l2) (mix l1 (cdr l2)))
+		) 		
+	)
+)
+(if (equal x 1) (cons (car l1) (mix (cdr l1) l2)) 

@@ -1,0 +1,11 @@
+(defun split (L) 
+	(if (null (cddr L))
+		L
+		(if (atom (car L))
+
+			(cons (cons (append (cons (car L) nil) (caddr L)) (append (cadr L) (cadddr L))) (split (cddddr L))
+			(cons (cons (append (car L) (caddr L)) (append (cadr L) (cadddr L))) (split (cddddr L))
+		)
+	)	
+)
+)			;(cons (append (cons (car L) nil) (caddr L)) (cons (cadr L) nil)) (split (cddr L)) )

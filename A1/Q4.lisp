@@ -1,0 +1,13 @@
+(defun splitFirst (L)
+	(if (null (caddr L))
+		(cons (car L) nil)
+		(cons (car L) (splitFirst (cddr L)))
+	)
+)
+
+(defun split (L)
+	(if (null L)
+		(list nil nil)
+		(list (cons (car L) (splitFirst (cddr L))) (cons (cadr L) (splitFirst (cdddr L))) ))
+)
+		;(cons (append (cons (car L) nil) (caddr L)) (cons (cadr L) nil)) (split (cddr L)) )
